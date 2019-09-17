@@ -1,4 +1,3 @@
-<script src="../../node_modules/webpack-hot-middleware/example/webpack.config.js"></script>
 <template>
   <div v-if="!loading">
     <v-container fluid>
@@ -42,7 +41,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn flat :to="'/ad/' + ad.id">Open</v-btn>
-              <app-buy-modal :ad="ad"></app-buy-modal>
+              <v-btn raised class="primary">Buy</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -81,8 +80,8 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
-  .car-link
+<style scoped>
+  .car-link {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -91,5 +90,5 @@ export default {
     padding: 5px 15px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-
+  }
 </style>
